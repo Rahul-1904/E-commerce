@@ -16,10 +16,10 @@ const getproduct = async(req,res) => {
 
 const getProductById = async(req,res) => {
     try{
-        //   const product = await Product.findById(req.params.id);
+          const product = await Product.findById(req.params.id);
         //   res.json(product);
-        console.log(req.params);
-        res.send(req.params.id);
+        console.log(product);
+        res.send(product);
     }catch(error){
         console.log("error occured"+ error);
     }
